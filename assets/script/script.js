@@ -1,9 +1,6 @@
 $(function () {
   $("#buscar").click((e) => {
       buscarPersonaje();
-      $("#limpiar").click(e=>{
-          limpiar();
-      })
   })
 
   //Tecla enter detectar
@@ -13,7 +10,6 @@ $(function () {
       }
   });
 });
-
 
 function getPersonaje(id) {
   $.ajax({
@@ -26,7 +22,7 @@ function getPersonaje(id) {
       console.log(generarCard(response));
     },
   });
-}
+};
 
 function generarCard(personaje) {
   var card = `
@@ -40,17 +36,17 @@ function generarCard(personaje) {
         </div>
     </div>`;
   return card;
-}
+};
 
 function validacion(id){
-    var expresion = /^\d{1,3}$/; // 1 a 3 digitos
+    var expresion = /\b([1-9]|[1-9][0-9]|1[01][0-9]|15[1])\b/;  //regex para 151 pokemon
     if(!expresion.test(id)){
         alert("input invalido");
         $("input_busqueda").focus();
         return false
     }
     return true;
-}
+};
 
 function buscarPersonaje() {
     var id_personaje = $("#input_busqueda").val();
@@ -60,5 +56,5 @@ function buscarPersonaje() {
         $("#input_busqueda").val("");
         $("#input_busqueda").focus();
     }
-}
+};
 
