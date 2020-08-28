@@ -1,1022 +1,504 @@
-/* Fuente de este código: https://codepen.io/Bidji/pen/MYdPwo */
+$red: rgb(211, 10, 64);
+$darkred: rgb(144, 6, 42);
+$lightgray: rgb(227, 227, 227);
+$darkgray: rgb(131, 133, 132);
+$darkergray: rgb(44, 44, 44);
 
-* {
-	margin: 0;
-	padding: 0;
+body {
+  height: 100%;
+  width: 100%;
 }
 
-
-
-@media all {
-
-	div#pokedex
-	{
-		width: 750px;
-		margin: 50px auto 0 auto;
-	}
-
-	div#left
-	{
-		width: 400px;
-		height: 500px;
-		float: left;
-		position: relative;
-		z-index: 1;
-	}
-
-	div#right
-	{
-		width: 350px;
-		height: 500px;
-		float: left;
-		position: relative;
-	}
-
-
-
-	/* //// LEFT PART //// */
-
-	div#curve1_left
-	{
-		width: 201px;
-		height: 85px;
-		background-color: #8b0000;
-		float: left;
-		padding: 15px 0 0 15px;
-
-		position: absolute;
-		top: 0;
-		left: 0;
-
-		box-shadow: -10px 9px #5e0000;
-		-webkit-box-shadow: -10px 9px #5e0000;
-		-moz-box-shadow: -10px 9px #5e0000;
-		-o-box-shadow: -10px 9px #5e0000;
-
-		border-bottom-right-radius: 85px 60px;
-		-webkit-border-bottom-right-radius: 85px 60px;
-		-moz-border-bottom-right-radius: 85px 60px;
-		-o-border-bottom-right-radius: 85px 60px;
-
-		border-top-left-radius: 30px;
-		-webkit-border-top-left-radius: 30px;
-		-moz-border-top-left-radius: 30px;
-		-o-border-top-left-radius: 30px;
-	}
-
-
-	div#bg_curve1_left
-	{
-		width: 400px;
-		height: 80px;
-		background-color: #8b0000;
-
-		border-top-left-radius: 30px;
-		-webkit-border-top-left-radius: 30px;
-		-moz-border-top-left-radius: 30px;
-		-o-border-top-left-radius: 30px;
-	}
-
-	div#curve2_left
-	{
-		width: 216px;
-		height: 451px;
-		background-color: #c00d0d;
-		float: right;
-
-		position: absolute;
-		bottom: 0;
-		right: 0;
-
-		border-top-left-radius:85px 60px;
-		-webkit-border-top-left-radius: 85px 60px;
-		-moz-border-top-left-radius: 85px 60px;
-		-o-border-top-left-radius: 85px 60px;
-	}
-
-	div#bg_curve2_left
-	{
-		width: 400px;
-		height: 420px;
-		background-color: #c00d0d;
-
-		box-shadow: -10px 9px #5e0000;
-		-webkit-box-shadow: -10px 9px #5e0000;
-		-moz-box-shadow: -10px 9px #5e0000;
-		-o-box-shadow: -10px 9px #5e0000;
-
-		border-bottom-left-radius: 30px;
-		-webkit-border-bottom-left-radius: 30px;
-		-moz-border-bottom-left-radius: 30px;
-		-o-border-bottom-left-radius: 30px;
-	}
-
-	div#buttonGlass
-	{
-		width: 60px;
-		height: 60px;
-		margin-right: 15px;
-		border: 5px solid #fff;
-		float: left;
-
-		box-shadow: 0 0 10px #490000;
-		-webkit-box-shadow: 0 0 10px #490000;
-		-moz-box-shadow: 0 0 10px #490000;
-		-o-box-shadow: 0 0 10px #490000;
-		
-		background: radial-gradient(#05fbfb, #29abe3);
-		background: -webkit-radial-gradient(#05fbfb, #29abe3);
-		background: -moz-radial-gradient(#05fbfb, #29abe3);
-		background: -o-radial-gradient(#05fbfb, #29abe3);
-		
-		border-radius: 35px;
-		-webkit-border-radius: 35px;
-		-moz-border-radius: 35px;
-	   	-o-border-radius: 35px;
-	}
-
-	div#reflect
-	{
-		width: 30px;
-		height: 18px;
-		margin: 3px 0 0 15px;
-		background: #fff;
-		opacity: 0.6;
-
-		border-radius: 15px 9px;
-		-webkit-border-radius: 15px 9px;
-		-moz-border-radius: 15px 9px;
-	   	-o-border-radius: 15px 9px;
-		        
-	}
-
-	div#miniButtonGlass1
-	{
-		width: 20px;
-		height: 20px;
-		margin-right: 10px;
-		float: left;
-
-		box-shadow: 0 0 10px #490000;
-		-webkit-box-shadow: 0 0 10px #490000;
-		-moz-box-shadow: 0 0 10px #490000;
-		-o-box-shadow: 0 0 10px #490000;
-
-		border-radius: 20px;
-		-webkit-border-radius: 20px;
-		-moz-border-radius: 20px;
-		-o-border-radius: 20px;
-		
-		background: radial-gradient(#fb7b7b, #fb0505);
-		background: -webkit-radial-gradient(#fb7b7b, #fb0505);
-		background: -moz-radial-gradient(#fb7b7b, #fb0505);
-		background: -o-radial-gradient(#fb7b7b, #fb0505);
-	}
-
-	div#miniButtonGlass2
-	{
-		width: 20px;
-		height: 20px;
-		margin-right: 10px;
-		float: left;
-
-		box-shadow: 0 0 10px #490000;
-		-webkit-box-shadow: 0 0 10px #490000;
-		-moz-box-shadow: 0 0 10px #490000;
-		-o-box-shadow: 0 0 10px #490000;
-
-		border-radius: 20px;
-		-webkit-border-radius: 20px;
-		-moz-border-radius: 20px;
-		-o-border-radius: 20px;
-		
-		background: radial-gradient(#fbfb9b, #fbfb05);
-		background: -webkit-radial-gradient(#fbfb9b, #fbfb05);
-		background: -moz-radial-gradient(#fbfb9b, #fbfb05);
-		background: -o-radial-gradient(#fbfb9b, #fbfb05);
-	}
-
-	div#miniButtonGlass3
-	{
-		width: 20px;
-		height: 20px;
-		margin-right: 10px;
-		float: left;
-
-		box-shadow: 0 0 10px #490000;
-		-webkit-box-shadow: 0 0 10px #490000;
-		-moz-box-shadow: 0 0 10px #490000;
-		-o-box-shadow: 0 0 10px #490000;
-
-		border-radius: 20px;
-		-webkit-border-radius: 20px;
-		-moz-border-radius: 20px;
-		-o-border-radius: 20px;
-		
-		background: radial-gradient(#b0fb7b, #50fb05);
-		background: -webkit-radial-gradient(#b0fb7b, #50fb05);
-		background: -moz-radial-gradient(#b0fb7b, #50fb05);
-		background: -o-radial-gradient(#b0fb7b, #50fb05);
-	}
-
-	div#junction
-	{
-		width: 60px;
-		height: 451px;
-		float: right;
-		
-		background: linear-gradient(left, #8b0000 0%, #c00d0d 50%, #8b0000 100%);	
-		background: -webkit-linear-gradient(left, #8b0000 0%, #c00d0d 50%, #8b0000 100%);
-		background: -moz-linear-gradient(left, #8b0000 0%, #c00d0d 50%, #8b0000 100%);
-		background: -o-linear-gradient(left, #8b0000 0%, #c00d0d 50%, #8b0000 100%);
-	}
-
-	div#junction1
-	{
-		height: 40px;
-		background-color: #5e0000;
-		opacity: 0.3;
-		margin-top: 50px;
-		margin-bottom: 262px;
-
-		border-top: 2px solid #330000;
-		border-bottom: 2px solid #330000;
-	}
-
-	div#junction2
-	{
-		height: 40px;
-		background-color: #5e0000;
-		opacity: 0.3;
-
-		border-top: 2px solid #330000;
-		border-bottom: 2px solid #330000;
-	}
-
-	div#screen
-	{
-		height: 245px;
-		width: 260px;
-		padding: 0 20px;
-		background-color: #b0b0b0;
-		float:left;
-
-		position: absolute;
-		top: 130px;
-		left: 19px;
-
-		border-radius: 15px;
-		-webkit-border-radius: 15px;
-		-moz-border-radius: 15px;
-		-o-border-radius: 15px;
-	}
-
-	div#screen:after
-	{
-		content: "";
-		border-top: 40px solid #b0b0b0;
-		border-left: 40px solid #c00d0d;
-		height: 0;
-
-		position: absolute;
-		bottom: 0;
-		left: 0;
-	}
-
-	div#picture
-	{
-		height: 175px;
-		width: 254px;
-		margin-top: 20px;
-		margin-bottom: 9px;
-		background-color: #fff;
-		border: 3px solid #494949;
-		clear: both;
-
-		border-radius: 15px;
-		-webkit-border-radius: 15px;
-		-moz-border-radius: 15px;
-		-o-border-radius: 15px;
-	}
-
-	div#picture img
-	{
-		display: block;
-		margin: 0 auto;
-	}
-
-	div#topPicture
-	{
-		margin: 6px auto;
-		width: 40px;
-	}
-
-	div#buttontopPicture1, div#buttontopPicture2
-	{
-		height: 8px;
-		width: 8px;
-		background-color: #c00d0d;
-		border: 1px solid #000;
-		float: left;
-
-		border-radius: 15px;
-		-webkit-border-radius: 15px;
-		-moz-border-radius: 15px;
-		-o-border-radius: 15px;
-	}
-
-	div#buttontopPicture1
-	{
-		margin-right: 20px;
-	}
-
-	div#buttonbottomPicture
-	{
-		height: 26px;
-		width: 26px;
-		background-color: #c00d0d;
-		margin-left: 35px;
-		float: left;
-
-		border-radius: 30px;
-		-webkit-border-radius: 30px;
-		-moz-border-radius: 30px;
-		-o-border-radius: 30px;
-
-		box-shadow: -2px 1px #5e0000;
-		-webkit-box-shadow: -2px 1px #5e0000;
-		-moz-box-shadow: -2px 1px #5e0000;
-		-o-box-shadow: -2px 1px #5e0000;
-
-		background: linear-gradient(top, #c00d0d 0%, #8b0000 80%);	
-		background: -webkit-linear-gradient(top, #c00d0d 0%, #8b0000 80%);
-		background: -moz-linear-gradient(top, #c00d0d 0%, #8b0000 80%);
-		background: -o-linear-gradient(top, #c00d0d 0%, #8b0000 80%);
-	}
-
-	div#speakers
-	{
-		float: right;
-		width: 75px;
-		height: 25px;
-		margin-right: 20px;
-	}
-
-	div.sp
-	{
-		height: 3px;
-		margin-bottom: 5px;
-		background-color: #494949;
-
-		border-radius: 30px;
-		-webkit-border-radius: 30px;
-		-moz-border-radius: 30px;
-		-o-border-radius: 30px;
-	}
-
-	div#bigbluebutton
-	{
-		height: 50px;
-		width: 50px;
-		background-color: #000;
-
-		position: absolute;
-		top: 395px;
-		left: 30px;
-
-		border-radius: 100px;
-		-webkit-border-radius: 100px;
-		-moz-border-radius: 100px;
-		-o-border-radius: 100px;
-
-		background: linear-gradient(top, #307bfb 0%, #0530e5 80%);	
-		background: -webkit-linear-gradient(top, #307bfb 0%, #0530e5 80%);
-		background: -moz-linear-gradient(top, #307bfb 0%, #0530e5 80%);
-		background: -o-linear-gradient(top, #307bfb 0%, #0530e5 80%);
-
-		box-shadow: -3px 2px #001c91;
-		-webkit-box-shadow: -3px 2px #001c91;
-		-moz-box-shadow: -3px 2px #001c91;
-		-o-box-shadow: -3px 2px #001c91;
-	}
-
-	div#barbutton1
-	{
-		height: 13px;
-		width: 50px;
-
-		position: absolute;
-		top: 405px;
-		left: 100px;
-
-		border-radius: 100px;
-		-webkit-border-radius: 100px;
-		-moz-border-radius: 100px;
-		-o-border-radius: 100px;
-
-		background: linear-gradient(top, #50fb05 0%, #057b05 100%);	
-		background: -webkit-linear-gradient(top, #50fb05 0%, #057b05 100%);
-		background: -moz-linear-gradient(top, #50fb05 0%, #057b05 100%);
-		background: -o-linear-gradient(top, #50fb05 0%, #057b05 100%);
-
-		box-shadow: -1px 2px #004200;
-		-webkit-box-shadow: -1px 2px #004200;
-		-moz-box-shadow: -1px 2px #004200;
-		-o-box-shadow: -1px 2px #004200;
-	}
-
-	div#barbutton2
-	{
-		height: 13px;
-		width: 50px;
-
-		position: absolute;
-		top: 405px;
-		left: 165px;
-
-		border-radius: 100px;
-		-webkit-border-radius: 100px;
-		-moz-border-radius: 100px;
-		-o-border-radius: 100px;
-
-		background: linear-gradient(top, #fb6505 0%, #bb0505 100%);	
-		background: -webkit-linear-gradient(top, #fb6505 0%, #bb0505 100%);
-		background: -moz-linear-gradient(top, #fb6505 0%, #bb0505 100%);
-		background: -o-linear-gradient(top, #fb6505 0%, #bb0505 100%);
-
-		box-shadow: -1px 2px #7b0000;
-		-webkit-box-shadow: -1px 2px #7b0000;
-		-moz-box-shadow: -1px 2px #7b0000;
-		-o-box-shadow: -1px 2px #7b0000;
-	}
-
-	div#cross
-	{
-		width: 90px;
-		height: 90px;
-
-		position: absolute;
-		top: 394px;
-		left: 230px;
-	}
-
-	div#topcross
-	{
-		width: 30px;
-		height: 30px;
-		background-color: #222;
-
-		position: absolute;
-		top: 0;
-		left: 30px;
-
-		box-shadow: -3px 2px #010101;
-		-webkit-box-shadow: -3px 2px #010101;
-		-moz-box-shadow: -3px 2px #010101;
-		-o-box-shadow: -3px 2px #010101;
-
-		border-top-left-radius: 5px;
-		-webkit-border-top-left-radius: 5px;
-		-moz-border-top-left-radius: 5px;
-		-o-border-top-left-radius: 5px;
-
-		border-top-right-radius: 5px;
-		-webkit-border-top-right-radius: 5px;
-		-moz-border-top-right-radius: 5px;
-		-o-border-top-right-radius: 5px;
-	}
-
-	div#leftcross
-	{
-		width: 30px;
-		height: 30px;
-		background-color: #222;
-		z-index: 1;
-
-		position: absolute;
-		left: 0;
-		top: 30px;
-
-		box-shadow: -3px 2px #010101;
-		-webkit-box-shadow: -3px 2px #010101;
-		-moz-box-shadow: -3px 2px #010101;
-		-o-box-shadow: -3px 2px #010101;
-
-		border-top-left-radius: 5px;
-		-webkit-border-top-left-radius: 5px;
-		-moz-border-top-left-radius: 5px;
-		-o-border-top-left-radius: 5px;
-
-		border-bottom-left-radius: 5px;
-		-webkit-border-bottom-left-radius: 5px;
-		-moz-border-bottom-left-radius: 5px;
-		-o-border-bottom-left-radius: 5px;
-	}
-
-	div#midcross
-	{
-		width: 30px;
-		height: 30px;
-		background-color: #222;
-
-		position: absolute;
-		top: 30px;
-		left: 30px;
-
-		box-shadow: -3px 2px #010101;
-		-webkit-box-shadow: -3px 2px #010101;
-		-moz-box-shadow: -3px 2px #010101;
-		-o-box-shadow: -3px 2px #010101;
-	}
-
-	div#rightcross
-	{
-		width: 30px;
-		height: 30px;
-		background-color: #222;
-
-		position: absolute;
-		top: 30px;
-		right: 0;
-
-		box-shadow: -3px 2px #010101;
-		-webkit-box-shadow: -3px 2px #010101;
-		-moz-box-shadow: -3px 2px #010101;
-		-o-box-shadow: -3px 2px #010101;
-
-		border-top-right-radius: 5px;
-		-webkit-border-top-right-radius: 5px;
-		-moz-border-top-right-radius: 5px;
-		-o-border-top-right-radius: 5px;
-
-		border-bottom-right-radius: 5px;
-		-webkit-border-bottom-right-radius: 5px;
-		-moz-border-bottom-right-radius: 5px;
-		-o-border-bottom-right-radius: 5px;
-	}
-
-	div#botcross
-	{
-		width: 30px;
-		height: 30px;
-		background-color: #222;
-
-		position: absolute;
-		bottom: 0;
-		left: 30px;
-
-		box-shadow: -3px 2px #010101;
-		-webkit-box-shadow: -3px 2px #010101;
-		-moz-box-shadow: -3px 2px #010101;
-		-o-box-shadow: -3px 2px #010101;
-
-		border-bottom-left-radius: 5px;
-		-webkit-border-bottom-left-radius: 5px;
-		-moz-border-bottom-left-radius: 5px;
-		-o-border-bottom-left-radius: 5px;
-
-		border-bottom-right-radius: 5px;
-		-webkit-border-bottom-right-radius: 5px;
-		-moz-border-bottom-right-radius: 5px;
-		-o-border-bottom-right-radius: 5px;
-	}
-
-	div#upT
-	{
-		width: 0;
-		height: 0;
-		border-left: 10px solid transparent;
-		border-right: 10px solid transparent;
-		border-bottom: 10px solid #111;
-
-		position: absolute;
-		top: 5px;
-		left: 4px;
-	}
-
-	div#downT
-	{
-		width: 0;
-		height: 0;
-		border-left: 10px solid transparent;
-		border-right: 10px solid transparent;
-		border-top: 10px solid #111;
-
-		position: absolute;
-		bottom: 5px;
-		left: 4px;
-	}
-
-	div#leftT
-	{
-		width: 0;
-		height: 0;
-		border-top: 10px solid transparent;
-		border-right: 10px solid #111;
-		border-bottom: 10px solid transparent;
-
-		position: absolute;
-		top: 5px;
-		left: 4px;
-	}
-
-	div#rightT
-	{
-		width: 0;
-		height: 0;
-		border-top: 10px solid transparent;
-		border-left: 10px solid #111;
-		border-bottom: 10px solid transparent;
-
-		position: absolute;
-		top: 5px;
-		right: 5px;
-	}
-
-	div#midCircle
-	{
-		width: 20px;
-		height: 20px;
-
-		position: absolute;
-		top: 5px;
-		left: 4px;
-
-		border-radius: 30px;
-		-webkit-border-radius: 30px;
-		-moz-border-radius: 30px;
-		-o-border-radius: 30px;
-
-		background: radial-gradient(#111, #222);
-		background: -webkit-radial-gradient(#111, #222);
-		background: -moz-radial-gradient(#111, #222);
-		background: -o-radial-gradient(#111, #222);
-	} 
-
-
-
-	/* //// RIGHT PART //// */
-
-	div#curve1_right
-	{
-		width: 166px;
-		height: 451px;
-		background-color: #c00d0d;
-		float: right;
-
-		position: absolute;
-		bottom: 0;
-		left: 0;
-
-		border-top-right-radius:85px 60px;
-		-webkit-border-right-left-radius: 85px 60px;
-		-moz-border-right-left-radius: 85px 60px;
-		-o-border-right-left-radius: 85px 60px;
-	}
-
-
-	div#bg_curve1_right
-	{
-		width: 350px;
-		height: 80px;
-		background-color: #fff;
-
-		border-top-right-radius: 30px;
-		-webkit-border-top-right-radius: 30px;
-		-moz-border-top-right-radius: 30px;
-		-o-border-top-right-radius: 30px;
-	}
-
-	div#curve2_right
-	{
-		width: 216px;
-		height: 100px;
-		background-color: #fff;
-		float: left;
-
-		position: absolute;
-		top: 0;
-		right: 0;
-
-		border-bottom-left-radius: 85px 60px;
-		-webkit-border-bottom-left-radius: 85px 60px;
-		-moz-border-bottom-left-radius: 85px 60px;
-		-o-border-bottom-left-radius: 85px 60px;
-	}
-
-	div#bg_curve2_right
-	{
-		width: 350px;
-		height: 420px;
-		background-color: #c00d0d;
-
-		border-bottom-right-radius: 30px;
-		-webkit-border-bottom-right-radius: 30px;
-		-moz-border-bottom-right-radius: 30px;
-		-o-border-bottom-right-radius: 30px;
-
-		box-shadow: -10px 9px #5e0000;
-		-webkit-box-shadow: -10px 9px #5e0000;
-		-moz-box-shadow: -10px 9px #5e0000;
-		-o-box-shadow: -10px 9px #5e0000;
-	}
-
-	div#stats
-	{
-		height: 130px;
-		width: 280px;
-		padding: 10px;
-		background-color: #30da0c;
-		z-index: 1;
-		font-size: 13px;
-		font-family: arial, sans-serif;
-
-		position: absolute;
-		top: 130px;
-		left: 25px;
-
-		border-radius: 15px;
-		-webkit-border-radius: 15px;
-		-moz-border-radius: 15px;
-		-o-border-radius: 15px;
-
-		box-shadow: 0 0 20px #003300 inset;
-		-webkit-box-shadow: 0 0 20px #003300 inset;
-		-moz-box-shadow: 0 0 20px #003300 inset;
-		-o-box-shadow: 0 0 20px #003300 inset;
-	}
-
-	div#blueButtons1
-	{
-		z-index: 1;
-
-		position: absolute;
-		top: 295px;
-		left: 49px;
-	}
-
-	div#blueButtons2
-	{
-		z-index: 1;
-
-		position: absolute;
-		top: 335px;
-		left: 49px;
-	}
-
-	div.blueButton
-	{
-		height: 35px;
-		width : 45px;
-		background-color: #003300;
-		float: left;
-		margin-right: 7px;
-
-		border-radius: 10px;
-		-webkit-border-radius: 10px;
-		-moz-border-radius: 10px;
-		-o-border-radius: 10px;
-
-		background: linear-gradient(top, #307bfb 0%, #0530e5 80%);	
-		background: -webkit-linear-gradient(top, #307bfb 0%, #0530e5 80%);
-		background: -moz-linear-gradient(top, #307bfb 0%, #0530e5 80%);
-		background: -o-linear-gradient(top, #307bfb 0%, #0530e5 80%);
-
-		box-shadow: -1px 2px #001c91;
-		-webkit-box-shadow: -1px 2px #001c91;
-		-moz-box-shadow: -1px 2px #001c91;
-		-o-box-shadow: -1px 2px #001c91;
-	}
-
-	div#barbutton3
-	{
-		height: 13px;
-		width: 50px;
-		z-index: 1;
-
-		position: absolute;
-		top: 385px;
-		left: 210px;
-
-		border-radius: 100px;
-		-webkit-border-radius: 100px;
-		-moz-border-radius: 100px;
-		-o-border-radius: 100px;
-
-		background: linear-gradient(top, #50fb05 0%, #057b05 100%);	
-		background: -webkit-linear-gradient(top, #50fb05 0%, #057b05 100%);
-		background: -moz-linear-gradient(top, #50fb05 0%, #057b05 100%);
-		background: -o-linear-gradient(top, #50fb05 0%, #057b05 100%);
-
-		box-shadow: -1px 2px #004200;
-		-webkit-box-shadow: -1px 2px #004200;
-		-moz-box-shadow: -1px 2px #004200;
-		-o-box-shadow: -1px 2px #004200;
-	}
-
-	div#barbutton4
-	{
-		height: 13px;
-		width: 50px;
-		z-index: 1;
-
-		position: absolute;
-		top: 385px;
-		left: 270px;
-
-		border-radius: 100px;
-		-webkit-border-radius: 100px;
-		-moz-border-radius: 100px;
-		-o-border-radius: 100px;
-
-		background: linear-gradient(top, #fb6505 0%, #bb0505 100%);	
-		background: -webkit-linear-gradient(top, #fb6505 0%, #bb0505 100%);
-		background: -moz-linear-gradient(top, #fb6505 0%, #bb0505 100%);
-		background: -o-linear-gradient(top, #fb6505 0%, #bb0505 100%);
-
-		box-shadow: -1px 2px #7b0000;
-		-webkit-box-shadow: -1px 2px #7b0000;
-		-moz-box-shadow: -1px 2px #7b0000;
-		-o-box-shadow: -1px 2px #7b0000;
-	}
-
-	div#miniButtonGlass4
-	{
-		width: 15px;
-		height: 15px;
-		float: left;
-		z-index: 1;
-
-		position: absolute;
-		top: 383px;
-		left: 25px;
-
-		box-shadow: 0 0 10px #490000;
-		-webkit-box-shadow: 0 0 10px #490000;
-		-moz-box-shadow: 0 0 10px #490000;
-		-o-box-shadow: 0 0 10px #490000;
-
-		border-radius: 20px;
-		-webkit-border-radius: 20px;
-		-moz-border-radius: 20px;
-		-o-border-radius: 20px;
-		
-		background: radial-gradient(#ff9b5b, #fb6505);
-		background: -webkit-radial-gradient(#ff9b5b, #fb6505);
-		background: -moz-radial-gradient(#ff9b5b, #fb6505);
-		background: -o-radial-gradient(#ff9b5b, #fb6505);
-	}
-
-	div#miniButtonGlass5
-	{
-		width: 15px;
-		height: 15px;
-		float: left;
-		z-index: 1;
-
-		position: absolute;
-		top: 383px;
-		left: 51px;
-
-		box-shadow: 0 0 10px #490000;
-		-webkit-box-shadow: 0 0 10px #490000;
-		-moz-box-shadow: 0 0 10px #490000;
-		-o-box-shadow: 0 0 10px #490000;
-
-		border-radius: 20px;
-		-webkit-border-radius: 20px;
-		-moz-border-radius: 20px;
-		-o-border-radius: 20px;
-		
-		background: radial-gradient(#0abd0a, #057b05);
-		background: -webkit-radial-gradient(#0abd0a, #057b05);
-		background: -moz-radial-gradient(#0abd0a, #057b05);
-		background: -o-radial-gradient(#0abd0a, #057b05);
-	}
-
-	div#yellowBox1
-	{
-		width: 140px;
-		height: 70px;
-		z-index: 1;
-		background-color: #ffff00;
-
-		position: absolute;
-		top: 415px;
-		left: 25px;
-
-		border-radius: 15px;
-		-webkit-border-radius: 15px;
-		-moz-border-radius: 15px;
-		-o-border-radius: 15px;
-
-		box-shadow: 0 0 20px #ff6600 inset;
-		-webkit-box-shadow: 0 0 20px #ff6600 inset;
-		-moz-box-shadow: 0 0 20px #ff6600 inset;
-		-o-box-shadow: 0 0 20px #ff6600 inset;
-	}
-
-	div#yellowBox2
-	{
-		width: 140px;
-		height: 70px;
-		z-index: 1;
-		background-color: #ffff00;
-
-		position: absolute;
-		top: 415px;
-		left: 185px;
-
-		border-radius: 15px;
-		-webkit-border-radius: 15px;
-		-moz-border-radius: 15px;
-		-o-border-radius: 15px;
-
-		box-shadow: 0 0 20px #ff6600 inset;
-		-webkit-box-shadow: 0 0 20px #ff6600 inset;
-		-moz-box-shadow: 0 0 20px #ff6600 inset;
-		-o-box-shadow: 0 0 20px #ff6600 inset;
-	}
-
+.search {
+  &-container {
+    background: rgb(237,113,101); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(237,113,101,1) 80%, rgba(103,104,108,1) 81%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(237,113,101,1) 80%,rgba(103,104,108,1) 81%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(237,113,101,1) 80%,rgba(103,104,108,1) 81%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    display: inline-block;
+    
+    margin: 20px;
+    border-radius: 5px;
+    display: inline-flex;
+    z-index: 1;
+    position: absolute;
+    top: 20px;
+    left: 100px;
+  }
+  
+  &-box {
+    font-family: "VT323";
+    font-size: 22px;
+    border: none;
+    padding: 10px;
+    margin: 5px 0 5px 5px;
+    border-radius: 5px;
+  }
+  
+  &-button {
+    background: #3d3d3d;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+    
+    .icon {
+      color: white;
+    }
+  }
 }
 
-@media handheld and (orientation:portrait), (max-width:768px) {
+.pokedex {
+  width: 1000px;
+  height: 670px;
+  margin: auto;
+  position: relative;
+  
+  &-left {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 50%;
+    border-radius: 40px 15px 15px 40px;
+    background: $red;
+    border-left: 20px solid $darkred;
+    border-bottom: 12px solid $darkred;
+  }
+  
+  &-lights {
+    &-container {
+      height: 100px;
+      width: 100%;
+      display: flex;
+    }
+    
+    &-lg {
+      background: rgb(168,242,251); /* Old browsers */
+      background: -moz-radial-gradient(center, ellipse cover, rgba(168,242,251,1) 0%, rgba(13,241,252,1) 50%, rgba(14,188,212,1) 100%); /* FF3.6-15 */
+      background: -webkit-radial-gradient(center, ellipse cover, rgba(168,242,251,1) 0%,rgba(13,241,252,1) 50%,rgba(14,188,212,1) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: radial-gradient(ellipse at center, rgba(168,242,251,1) 0%,rgba(13,241,252,1) 50%,rgba(14,188,212,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      border-radius: 50%;
+      border-top: 5px solid white;
+      border-right: 5px solid white;
+      border-bottom: 10px solid white;
+      border-left: 10px solid white;
+      height: 60px;
+      width: 60px;
+      margin: 10px 0 10px 10px;
+    }
+    
+    &-sm-container {
+      display: flex;
+      padding-top: 5px;
+    }
+    
+    &-sm-light {
+      background: white;
+      border-radius: 50%;
+      margin: 7px;
+      height: 25px;
+      width: 25px;
+      
+      &.one {
+        background: rgb(237,55,67); /* Old browsers */
+        background: -moz-radial-gradient(center, ellipse cover, rgba(237,55,67,1) 0%, rgba(170,5,21,1) 100%); /* FF3.6-15 */
+        background: -webkit-radial-gradient(center, ellipse cover, rgba(237,55,67,1) 0%,rgba(170,5,21,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: radial-gradient(ellipse at center, rgba(237,55,67,1) 0%,rgba(170,5,21,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      }
+      
+      &.two {
+        background: rgb(222,226,90); /* Old browsers */
+        background: -moz-radial-gradient(center, ellipse cover, rgba(222,226,90,1) 0%, rgba(142,153,59,1) 100%); /* FF3.6-15 */
+        background: -webkit-radial-gradient(center, ellipse cover, rgba(222,226,90,1) 0%,rgba(142,153,59,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: radial-gradient(ellipse at center, rgba(222,226,90,1) 0%,rgba(142,153,59,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      }
+      
+      &.three {
+        background: rgb(169,247,76); /* Old browsers */
+        background: -moz-radial-gradient(center, ellipse cover, rgba(169,247,76,1) 0%, rgba(102,166,56,1) 100%); /* FF3.6-15 */
+        background: -webkit-radial-gradient(center, ellipse cover, rgba(169,247,76,1) 0%,rgba(102,166,56,1) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: radial-gradient(ellipse at center, rgba(169,247,76,1) 0%,rgba(102,166,56,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      }
+    }
+  }
+  
+  &-screen {
+    position: relative;
+    background: $lightgray;
+    border-radius: 20px;
+    border-left: 7px solid $darkgray;
+    border-bottom: 7px solid $darkgray;
+    width: 400px;
+    height: 320px;
+    margin: 30px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    &:before {
+      content:' ';
+      left: -20px;
+      top: 281px;
+      position: absolute;
+      width: 110px;
+      height: 8px;
+      transform: rotate(45deg);
+      background-color: $darkgray;
+    }
+    
+    &-cut {
+      position: absolute;
+      top: 377px; right: 854px;
+      border-top: 80px solid transparent;
+      border-left: 80px solid $red;
+      z-index: 1;
+    }
+    
+    &-top {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    &-light {
+      background: $red;
+      width: 10px;
+      height: 10px;
+      margin: 15px 10px;
+      border-radius: 50%;
+    }
+    
+    &-image-container {
+      background: white;
+      border-radius: 10px;
+      height: 200px;
+      width: 330px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+    }
+    
+    &-image {
+      height: 100%;
+    }
+    
+    &-bottom {
+      height: 80px;
+      width: 65%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    &-button {
+      height: 35px;
+      width: 35px;
+      background: $red;
+      border-radius: 50%;
+    }
+    
+    &-vents {
+      width: 80px;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    &-vent {
+      width: 100%;
+      height: 3px;
+      border-radius: 10px;
+      background: black;
+      margin: 3px;
+    }
+  }
+  
+  &-controls {
+    width: 80%;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    
+    &-button {
+      background: $darkergray;
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      border-left: 10px solid black;
+      border-bottom: 10px solid black;
+      margin-right: 10px;
+    }
+    
+    &-longButton {
+      height: 15px;
+      width: 70px;
+      background: white;
+      margin: 15px;
+      border-radius: 10px;
+    }
+    
+    .redButton {
+      background: rgb(204, 3, 35);
+    }
+    
+    .blueButton {
+      background: rgb(14, 111, 128);
+    }
 
-	div#pokedex
-	{
-		width: 400px;
-	}
+  }
+  
+  &-pad {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 480px;
+    left: 400px;
+    
+    &-v {
+      height: 100%;
+      width: 30%;
+      border-left: 8px solid black;
+      border-bottom: 8px solid black;
+      border-radius: 5px;
+      background: $darkergray;
+      position: absolute;
+      left: -8px;
+    }
+    
+    &-h {
+      height: 30%;
+      width: 100%;
+      background: $darkergray;
+      border-radius: 5px;
+      border-left: 8px solid black;
+      border-bottom: 8px solid black;
+      top: 35px;
+      left: -43px;
+      position: absolute;
+    }
+    
+    &-middle {
+      height: 100%;
+      width: 30%;
+      border-radius: 5px;
+      background: $darkergray;
+      position: absolute;
+      z-index: 1;
+      
+      &-circle {
+        border: 1px solid black;
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        top: 40px;
+        left: 2px;
+        border-radius: 50%;
+      }
+    }
+  }
+  
+  &-smallScreen {
+    background: rgb(95, 196, 128);
+    height: 90px;
+    width: 180px;
+    border-radius: 10px;
+    position: absolute;
+    top: 550px;
+    left: 130px;
+  }
+  
+  &-right {
+    height: 90%;
+    width: 50%;
+    position: absolute;
+    left: 520px;
+    top: 50px;
+    border-radius: 0 0 40px 0;
+    background: rgb(191, 6, 56);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  &-info-container {
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    top: 130px;
+    border-radius: 7px;
+    background: rgb(8, 64, 53);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    .pokemon-name {
+      font-family: "VT323";
+      font-size: 32px;
+      font-weight: normal;
+      color: white;
+      margin: 0;
+    }
+    
+    .pokemon-types {
+      font-family: "VT323";
+      font-size: 32px;
+      color: white;
+      margin: 0;
+      list-style: none;
+      padding: 0;
+      
+      li {
+        display: inline;
+        margin: 5px;
+      }
+    }
+  }
+  
+  &-buttons {
+    margin-top: 20px;
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    top: 230px;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1;
+    
+    &-shadow {
+      background: rgb(69, 127, 200);
+      width: 300px;
+      height: 100px;
+      border-radius: 10px;
+      position: absolute;
+      top: 257px;
+      left: 97px;
+    }
+  }
+  
+  &-button {
+    height: 50px;
+    margin: 1px;
+    box-sizing: border-box;
+    width: calc((300px / 5) - 2px);
+    background: rgb(34, 196, 234);
+    
+    &.first {
+      border-radius: 10px 0 0 0;
+    }
+    
+    &.fifth {
+      border-radius: 0 10px 0 0;
+    }
+    
+    &.sixth {
+      border-radius: 0 0 0 10px;
+    }
+    
+    &.tenth {
+      border-radius: 0 0 10px 0;
+    }
+  }
+  
+  &-longButtons {
+    height: 20px;
+    width: 110px;
+    position: absolute;
+    top: 365px;
+    left: 285px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  &-longButton {
+    height: 13px;
+    width: 52px;
+    background: $darkergray;
+    border-radius: 10px;
+  }
+  
+  &-dualButtons {
+    display: flex;
+    height: 50px;
+    width: 120px;
+    position: absolute;
+    top: 400px;
+    left: 100px;
+    
+    &-shadow {
+      background: $darkgray;
+      width: 120px;
+      height: 50px;
+      border-radius: 10px;
+      position: absolute;
+      top: 406px;
+      left: 97px;
+    }
+  }
+  
+  &-dualButton {
+    background: $lightgray;
+    width: 50%;
+    height: 100%;
+    margin: 1px;
+    
+    &.first {
+      border-radius: 10px 0 0 10px;
+    }
+    
+    &.second {
+      border-radius: 0 10px 10px 0;
+    }
+  }
+  
+  &-goldButton {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 425px;
+    left: 355px;
+    background: rgb(199,189,118); /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, rgba(199,189,118,1) 1%, rgba(146,135,79,1) 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(199,189,118,1) 1%,rgba(146,135,79,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, rgba(199,189,118,1) 1%,rgba(146,135,79,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  }
+  
+  &-blackButtons {
+    width: 320px;
+    height: 60px;
+    position: absolute;
+    top: 510px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  &-blackButton {
+    width: 50%;
+    border-radius: 10px;
+    height: 100%;
+    margin: 0 10px;
+    background: $darkergray;
+  }
+}
 
-	div#logo
-	{
-		width: 281px;
-		height: 99px;
-		background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/200653/logo.png') no-repeat left top;
-		z-index: 1;
+// Light blinking classes
 
-		position: absolute;
-		top: 220px;
-		left: 30px;
-	}
+.blink {
+  animation: blink .5s linear infinite;
+}
 
-	div#left
-	{
-		width: 400px;
-		height: 500px;
-		float: left;
-		position: relative;
-		z-index: 1;
-		margin: 0 auto;
-	}
-
-	div#curve1_left
-	{
-		width: 201px;
-		height: 85px;
-		background-color: #8b0000;
-		float: left;
-		padding: 15px 0 0 15px;
-
-		position: absolute;
-		top: 0;
-		left: 0;
-
-		box-shadow: 0 0 #5e0000;
-		-webkit-box-shadow: 0 0 #5e0000;
-		-moz-box-shadow: 0 0 #5e0000;
-		-o-box-shadow: 0 0 #5e0000;
-
-		border-bottom-right-radius: 85px 60px;
-		-webkit-border-bottom-right-radius: 85px 60px;
-		-moz-border-bottom-right-radius: 85px 60px;
-		-o-border-bottom-right-radius: 85px 60px;
-
-		border-top-left-radius: 30px;
-		-webkit-border-top-left-radius: 30px;
-		-moz-border-top-left-radius: 30px;
-		-o-border-top-left-radius: 30px;
-	}
-
-	div#bg_curve1_left
-	{
-		width: 400px;
-		height: 80px;
-		background-color: #8b0000;
-
-		box-shadow: -10px 9px #5e0000;
-		-webkit-box-shadow: -10px 9px #5e0000;
-		-moz-box-shadow: -10px 9px #5e0000;
-		-o-box-shadow: -10px 9px #5e0000;
-
-		border-top-left-radius: 30px;
-		-webkit-border-top-left-radius: 30px;
-		-moz-border-top-left-radius: 30px;
-		-o-border-top-left-radius: 30px;
-	}
-
-	div#right, div#screen, div#bigbluebutton, div#barbutton1, div#barbutton2, div#cross
-	{
-		display: none;
-	}
-
+@keyframes blink {
+  0% {
+    -webkit-box-shadow: 0px 0px 17px 7px rgba(255,255,255,1);
+    -moz-box-shadow: 0px 0px 17px 7px rgba(255,255,255,1);
+    box-shadow: 0px 0px 17px 7px rgba(255,255,255,1);
+  }
+  100% {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
 }

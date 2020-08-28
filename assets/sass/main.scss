@@ -1,9 +1,11 @@
 //Abstracts
 @import 'abstracts/variables';
 
+//Vendors
+@import "vendor/bootstrap_4.5.0/bootstrap.scss";
+
 //Base
 @import 'base/typography';
-
 
 //Components
 @import 'components/buttons';
@@ -12,4 +14,3 @@
 @import 'layout/footer';
 @import 'layout/header';
 @import 'layout/nav';
-@import "layout/pokedex"; /* https://codepen.io/Bidji/pen/MYdPwo */
