@@ -9909,5 +9909,12 @@ h3 {
     border-color: #dee2e6;
   }
 }
+.btn-ruby {
+  background-color: palevioletred;
+}
+
+.pokebolas {
+  background-color: tomato;
+}
 
 /*# sourceMappingURL=styles.css.map */

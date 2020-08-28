@@ -3,6 +3,10 @@ $(function () {
       buscarPersonaje();
   })
 
+  $("#limpiar").click(e=>{
+    limpiar();
+  })
+
   //Tecla enter detectar
   $(document).keypress(function (e) { 
       if(e.which == 13){
@@ -11,7 +15,7 @@ $(function () {
   });
 });
 
-function getPersonaje(id) {
+getPersonaje =(id) =>{
   $.ajax({
     type: "GET",
     url: `https://pokeapi.co/api/v2/pokemon/${id}`,
@@ -24,7 +28,7 @@ function getPersonaje(id) {
   });
 };
 
-function generarCard(personaje) {
+ generarCard =(personaje) =>{
   var card = `
     <div class="col-sm-12 col-md-4"
         <div class="card" style="width: 20%;">
@@ -38,8 +42,8 @@ function generarCard(personaje) {
   return card;
 };
 
-function validacion(id){
-    var expresion = /\b([1-9]|[1-9][0-9]|1[01][0-9]|15[1])\b/;  //regex para 151 pokemon
+ validacion =(id)=>{
+    var expresion = /\b([1-9]|[1-9][0-9]|1[01][0-9]|15[0-1])|14[0-9]\b/;  //regex para 151 pokemon
     if(!expresion.test(id)){
         alert("input invalido");
         $("input_busqueda").focus();
@@ -48,7 +52,7 @@ function validacion(id){
     return true;
 };
 
-function buscarPersonaje() {
+buscarPersonaje =() => {
     var id_personaje = $("#input_busqueda").val();
     //validación
     if(validacion(id_personaje)){
@@ -58,3 +62,7 @@ function buscarPersonaje() {
     }
 };
 
+ limpiar =() =>{
+  $("#card").empty();
+  $("#input_busqueda").focus();
+}
