@@ -9917,4 +9917,45 @@ h3 {
   background-color: tomato;
 }
 
+.gameboy {
+  background-color: darkslateblue;
+  width: 250px;
+  text-align: justify;
+  margin: auto;
+  height: 300px;
+  border-radius: 10%;
+  padding-bottom: 23rem;
+  padding-top: 1em;
+}
+
+.pokecard {
+  width: 200px;
+  font-size: 10px;
+  margin: auto;
+  border-radius: 5%;
+}
+
+.pokeImg {
+  width: 70px;
+}
+
+.tituloPoke {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.gameColor {
+  background-color: black;
+  margin: auto;
+  width: 120px;
+  border-bottom-left-radius: 1em;
+}
+
+.pantallagameboy {
+  background-color: black;
+  padding-top: 1em;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+}
+
 /*# sourceMappingURL=styles.css.map */

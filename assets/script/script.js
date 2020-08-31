@@ -21,37 +21,40 @@ function getPersonaje(id) {
     url: `https://pokeapi.co/api/v2/pokemon/${id}`,
     success: function (response) {
       console.log("response=>", response);
-      //imprimir data
-      $("#card").append(generarCard(response));
+      $("#pokecard").empty();
+      $("#pokecard").append(generarCard(response));
       console.log(generarCard(response));
     },
   });
 };
 
- generarCard =(personaje) =>{
-  var card = `
-    <div class="col-sm-12 col-md-4"
-        <div class="card" style="width: 50%;">
-            <img src="${personaje.sprites.front_default}" class="card-img-top img-fluid" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">${personaje.name}</h5>
-                <div>Weight: ${personaje.weight}</div>
-                <div>Weight: ${personaje.height}</div>
-                <div>Type: ${personaje.types[0].type.name}</div>
-            </div>
-        </div>
-    </div>`;
-  return card;
-};
+generarCard =(personaje) =>{
+  var pokecard = `
+            <span class="d-inline-block bg-light m-0">
+                <img class="pokeImg" src="${personaje.sprites.front_default}" >
+            </span>
+            <span class="d-inline-block bg-light m-0">
+                <div class="tituloPoke">${personaje.name}</div>
+                <div>Tipo: ${personaje.types[0].type.name}</div>
+                <div>Peso: ${personaje.weight}</div>
+                <div>Altura: ${personaje.height}</div>
+            </span>   
+            
+            
+            `
+            ;
+  return pokecard; 
+}
 
  validacion =(id)=>{
-    var expresion = /\b([1-9]|[1-9][0-9]|1[01][0-9]|15[0-1]|14[0-9]|13[0-9])\b/;  //regex para 151 pokemon
-    if(!expresion.test(id)){
-        alert("Solo numeros del 1 - 151");
+ if(id >807 || id <0 || id ==="") {
+        alert("Solo numeros del 1 - 151")
         $("input_busqueda").focus();
-        return false
-    }
-    return true;
+      }
+      else{
+        return true 
+      }
+
 };
 
 buscarPersonaje =() => {
@@ -65,6 +68,6 @@ buscarPersonaje =() => {
 };
 
  limpiar =() =>{
-  $("#card").empty();
+  $("#pokecard").empty();
   $("#input_busqueda").focus();
 }
