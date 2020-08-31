@@ -9910,11 +9910,16 @@ h3 {
   }
 }
 .btn-ruby {
-  background-color: palevioletred;
+  background-color: crimson;
 }
 
 .pokebolas {
-  background-color: tomato;
+  background-color: darkslateblue;
+}
+
+body {
+  background-image: url(/assets/img/background.jpg);
+  background-size: cover;
 }
 
 .gameboy {
