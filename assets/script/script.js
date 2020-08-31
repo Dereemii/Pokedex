@@ -35,6 +35,7 @@ generarCard =(personaje) =>{
             </span>
             <span class="d-inline-block bg-light m-0">
                 <div class="tituloPoke">${personaje.name}</div>
+                <div>ID: ${personaje.id}</div>
                 <div>Tipo: ${personaje.types[0].type.name}</div>
                 <div>Peso: ${personaje.weight}</div>
                 <div>Altura: ${personaje.height}</div>
@@ -54,7 +55,7 @@ generarCard =(personaje) =>{
         theme: "light1", // "light2", "dark1", "dark2"
         animationEnabled: false, // change to true		
         title:{
-          text: "Estadisticas Pokémon"
+          text: "Stats"
         },
         data: [
         {
@@ -77,7 +78,7 @@ generarCard =(personaje) =>{
 
  validacion =(id)=>{
  if(id >807 || id <0 || id ==="") {
-        alert("Solo numeros del 1 - 151")
+        alert("Solo numeros del 1 - 807")
         $("input_busqueda").focus();
       }
       else{
